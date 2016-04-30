@@ -1,0 +1,117 @@
+{% extends '../other/base.html' %}
+
+
+
+
+{% block body1 %}
+<div id="header" class="container-fluid" style="height: 115px;">
+<p align="center" id="texter" class="text-master" style="padding-top:30px">Memorize</p>
+<p id="level" align="center" class="text-master" style="opacity:0.5;font-size:20px"></p>
+</div>
+{% endblock %}
+
+
+
+
+{% block style %} 
+<style>
+#large_container{
+     	padding:0px;
+     	padding-bottom: 5px;
+    }
+#inner_box {
+    width: 400px; /*can be in percentage also.*/
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 480px) {
+    #inner_container{
+    	width:250px;
+    	height:300px;
+
+    }
+    #rect_border {
+        width:340px;
+        height:390px;
+    }
+
+    #large_container{
+    	height:310;
+    }
+}
+</style>
+{% endblock %}
+
+
+
+
+{% block body3 %}
+<div id="outer_box"  >
+	<div id ="inner_box"  style="width:200px;text-align:center" display="block">
+	</div>
+</div>
+{% endblock %}
+
+
+
+
+
+{% block body2 %}
+<div style="text-align:center" class="container-fluid padded">
+	<div id="div_box" style="text-align:center" class="col-xs-12 text-center">
+	{% block bodyInner2 %}
+		<a href="/question" class="btn btn-default btn-lg color" name="btner">Proceed</a>
+		<div id="div_box"></div>
+	{% endblock %}
+	</div>
+</div>
+{% endblock %}
+
+
+
+
+{% block postJs %}
+<script>
+
+     var rawLeveler ='{{ level|escapejs }}'
+         currentLevel = JSON.parse(rawLeveler)
+    
+    console.log(currentLevel)
+
+     var rawShapes = '{{ shapes|escapejs }}'
+        currentShapesAll = JSON.parse(rawShapes)
+
+
+
+	document.getElementById("level").innerHTML = "Level " + currentLevel
+
+
+
+    for (i=0; i< currentShapesAll.length; i++){
+        var currentShape = currentShapesAll[i]
+        renderShape(currentShape)
+    }
+
+
+
+
+
+
+	// 	renderShape(currentShape)
+	// }
+
+</script>
+{% endblock %}
+
+
+
+{% block body5 %}
+<script> console.log({{data2}}) </script>
+
+<input type="hidden" name="title" value="hello world">
+
+{% endblock %}

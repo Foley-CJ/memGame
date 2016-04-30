@@ -1,0 +1,61 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset-"utf-8">
+	<meta http-equiv="X-UA_Compatible": content="IE=edge">
+	<meta name="viewport" content="width=device-width,, initial-scale=1">
+
+	<meta name="author" content="Connor Foley">
+	<link rel="icon" href="../../facicon.ico">
+	<title>{% block head_title %} MVP Landing {% endblock %}</title>
+
+	{% include '../other/head_css.html' %}
+
+	{% block style %} {% endblock %} 
+
+	{% include '../other/head_js.html' %}
+
+	{% block javascript %} {% endblock %}
+  </head>
+
+
+  <body class="color">
+ 
+ <input type="hidden" name="title" value="hello">
+
+<input type="hidden" name="title2" value="hello world">
+
+
+ 	{% block body1 %}
+ 	{% endblock %}
+
+ 	{% block body3 %}
+ 	{% endblock %}
+
+
+
+ 	{% block body2 %}
+	 	{% block bodyInner2 %}
+	 	{% endblock %}
+ 	{% endblock %}
+
+
+
+
+
+ 	{% block body4 %}
+ 	{% endblock %}
+
+
+ 	{% block body5 %}
+ 	{% endblock %}
+
+
+
+  </body>
+</html>
+
+{% block postJs %}
+{% endblock %}

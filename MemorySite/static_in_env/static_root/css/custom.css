@@ -1,0 +1,52 @@
+.text-master {
+	text-align: center;
+/*	font-size: 40px;*/ /*i just made this change*/
+	color: white;
+	
+}
+
+.color{
+	background-color: rgb(0, 105, 75);
+}
+
+.container1{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.btn-default{
+	color: white;
+	background-image:none;
+
+	text-shadow:none;
+	border-color:white;
+}
+
+.btn-default:hover{
+	background-color:white;
+	color: rgb(0, 105,75);
+}
+
+.padded{
+	padding-top: 5px;
+}
+
+
+
+#boxme{ margin:auto;
+		display:block;
+		height:505px;
+		width:450px;
+}
+
+#texter{
+	padding-top: 20px;
+	font-size: 40px;
+
+}
+
+
+
+
+
+

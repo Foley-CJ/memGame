@@ -1,0 +1,19 @@
+{% extends '../other/landing.html' %}
+
+{% block body2 %}
+<div style="text-align:center" class="container-fluid padded">
+	<div id="div_box" style="text-align:center" class="col-xs-12 text-center">
+
+	{% block bodyInner2 %}
+		<p class="lead text-master"> </br> </br> </br> <p>
+		<p class="lead text-master" style="font-size:20px;"> 	{{ question }}</p>
+		<a href="{{ trueUrl }}" class="btn btn-default btn-lg color">True</a>
+		<a href="{{ falseUrl }}" class="btn btn-default btn-lg color">False</a>
+		<div id="div_box"></div>
+
+
+	{% endblock %}
+
+	</div>
+</div>
+{% endblock %}

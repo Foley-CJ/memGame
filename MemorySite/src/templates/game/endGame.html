@@ -1,0 +1,20 @@
+{% extends '../other/landing.html' %}
+
+{% block body2 %}
+<div style="text-align:center" class="container-fluid padded">
+	<div id="div_box" style="text-align:center" class="col-xs-12 text-center">
+
+	{% block bodyInner2 %}
+		<p class="lead text-master"> </br> </br> </br> <p>
+		<p class="lead text-master" style="font-size:20px;"> Congrats! You made it to level {{ level }}</p>
+		<p class="lead text-master" style="font-size:20px;"> Your personal best is {{ best }} </p>
+		
+		<a href="/memorize" class="btn btn-default btn-lg color">Play Again?</a>
+		<div id="div_box"></div>
+
+
+	{% endblock %}
+
+	</div>
+</div>
+{% endblock %}
